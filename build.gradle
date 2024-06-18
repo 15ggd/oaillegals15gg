@@ -15,15 +15,10 @@ repositories {
         name = "sonatype"
         url = "https://oss.sonatype.org/content/groups/public/"
     }
-    maven {
-        name = 'PacketEvents'
-        url = 'https://repo.retrooper.dev/repository/maven-public/'
-    }
 }
 
 dependencies {
     compileOnly "io.papermc.paper:paper-api:1.20.6-R0.1-SNAPSHOT"
-    implementation 'io.github.retrooper.packetevents:spigot-api:2.0.0' // Replace 2.0.0 with the version you need
 }
 
 def targetJavaVersion = 21
