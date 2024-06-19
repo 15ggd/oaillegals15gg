@@ -1,4 +1,3 @@
-Here's a comprehensive README file for your GitHub repository, detailing what the code does:
 
 # Oaexploits Plugin
 
