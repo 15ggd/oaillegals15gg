@@ -1,4 +1,4 @@
-config-version: 1.3.18
+config-version: 1.3.19
 
 # Server opening date
 server-opening-date: "&bJuly 29, 2019" # Customize this date as needed. Format: "MMMM dd, yyyy"
@@ -12,10 +12,5 @@ messages:
   world-size: "&6&lWorld Size\n&7- The world has a file size of &e{world_size}."
   nether-size: "&6&lNether Size\n&7- The Nether has a file size of &e{nether_size}."
   end-size: "&6&lEnd Size\n&7- The End has a file size of &e{end_size}."
-  compressed-world-size: "&6&lCompressed World Size\n&7- Estimated compressed size: &e{compressed_world_size}."
-  compressed-nether-size: "&6&lCompressed Nether Size\n&7- Estimated compressed size: &e{compressed_nether_size}."
-  compressed-end-size: "&6&lCompressed End Size\n&7- Estimated compressed size: &e{compressed_end_size}."
   server-start-date: "&6&lServer Start Date\n&7- The server was opened on &e{server_start_date}."
-
-  compression:
-    ratio: 0.5
+  new-chunks-loaded: "&6&lNew Chunks Loaded\n&7- &e{new_chunks_loaded} &7new chunks have been loaded since the server started."
