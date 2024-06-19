@@ -170,10 +170,6 @@ deop-on-leave:
     to the spawn point.'
 
 
-respawn:
-  spawn-radius: 1500
-  world: world
-
 
 
 
