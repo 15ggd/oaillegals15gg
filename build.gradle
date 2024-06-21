@@ -48,10 +48,3 @@ processResources {
         expand props
     }
 }
-
-task generateDependencyGraph {
-    dependsOn "generateDependencyGraphViz"
-    doLast {
-        println 'Generated dependency graph.'
-    }
-}
