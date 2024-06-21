@@ -1,6 +1,4 @@
-config-version: 1.3.20
-
-# Configuration for Oaexploits Plugin
+config-version: 1.3.21
 
 # Messages configuration
 messages:
@@ -150,7 +148,6 @@ removal-options:
   remove-overleveled-enchantments: true
   remove-illegals-on-chunkload: true
 
-
 # Deop on leave configuration
 deop-on-leave:
   enabled: true
@@ -166,12 +163,7 @@ deop-on-leave:
     z: 0.0
     yaw: 0.0
     pitch: 0.0
-  message: '&cYou have been deopped, your inventory cleared, and you have been teleported
-    to the spawn point.'
-
-
-
-
+  message: '&cYou have been deopped, your inventory cleared, and you have been teleported to the spawn point.'
 
 # Chunk limiter configuration
 chunk-limiter:
@@ -180,7 +172,5 @@ chunk-limiter:
     TRAPPED_CHEST: 400
     TNT: 200
 
-
   messages:
-    block-limit-exceeded: You cannot place more than {limit} {block} blocks in this
-      chunk.
+    block-limit-exceeded: You cannot place more than {limit} {block} blocks in this chunk.

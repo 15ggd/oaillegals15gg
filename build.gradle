@@ -1,9 +1,10 @@
 plugins {
     id 'java'
+    id 'com.vanniktech.dependency.graph.generator' version '0.7.0'
 }
 
 group = 'fanlim.dev'
-version = '1.3.20'
+version = '1.3.21'
 
 repositories {
     mavenCentral()
@@ -45,5 +46,12 @@ processResources {
     filteringCharset 'UTF-8'
     filesMatching('plugin.yml') {
         expand props
+    }
+}
+
+task generateDependencyGraph {
+    dependsOn "generateDependencyGraphViz"
+    doLast {
+        println 'Generated dependency graph.'
     }
 }
