@@ -88,6 +88,8 @@ Configure the removal options in the `config.yml` file:
 removal-options:
   remove-illegal-items: true
   remove-overleveled-enchantments: true
+  remove-illegals-on-chunkload: true
+
 ```
 
 ### Additional Configurations
