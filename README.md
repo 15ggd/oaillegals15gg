@@ -1,7 +1,11 @@
-
 # Oaexploits Plugin
 
 Oaexploits is a Minecraft plugin designed to enhance server security by blocking unauthorized commands, removing illegal items, managing deop actions on player leave, and handling various configuration tasks. This plugin aims to provide server administrators with tools to maintain a fair and secure gameplay environment.
+
+## Repository Statistics
+- **Stars:** [Number of stars]
+- **Downloads:** [Number of downloads]
+- **Forks:** [Number of forks]
 
 ## Features
 
