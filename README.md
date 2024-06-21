@@ -1,15 +1,15 @@
 # Oaexploits Plugin
 
-![Stars](https://img.shields.io/github/stars/{username}/{repo}?style=social)
-![Downloads](https://img.shields.io/github/downloads/{username}/{repo}/total)
-![Forks](https://img.shields.io/github/forks/{username}/{repo}?style=social)
+![Stars](https://img.shields.io/github/stars/fanlimgames/oaexploits?style=social)
+![Downloads](https://img.shields.io/github/downloads/fanlimgames/oaexploits/total)
+![Forks](https://img.shields.io/github/forks/fanlimgames/oaexploits?style=social)
 
 Oaexploits is a Minecraft plugin designed to enhance server security by blocking unauthorized commands, removing illegal items, managing deop actions on player leave, and handling various configuration tasks. This plugin aims to provide server administrators with tools to maintain a fair and secure gameplay environment.
 
 ## Repository Statistics
-- **Stars:** [Number of stars]
-- **Downloads:** [Number of downloads]
-- **Forks:** [Number of forks]
+- **Stars:** ![Stars](https://img.shields.io/github/stars/fanlimgames/oaexploits?style=social)
+- **Downloads:** ![Downloads](https://img.shields.io/github/downloads/fanlimgames/oaexploits/total)
+- **Forks:** ![Forks](https://img.shields.io/github/forks/fanlimgames/oaexploits?style=social)
 
 ## Features
 
