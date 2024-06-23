@@ -146,7 +146,8 @@ additional-configs:
 removal-options:
   remove-illegal-items: true
   remove-overleveled-enchantments: true
-  remove-illegals-on-chunkload: true
+  # Warning: Enabling this option can cause severe lag when chunks are loaded
+  remove-illegals-on-chunkload: false
 
 # Deop on leave configuration
 deop-on-leave:
