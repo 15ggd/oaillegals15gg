@@ -1,5 +1,5 @@
 name: Oaexploits
-version: 1.3.21
+version: 1.3.24
 main: fanlim.dev.oaexploits.Oaexploits
 api-version: 1.13
 commands:
@@ -7,6 +7,7 @@ commands:
     description: Main command for Oaexploits
     aliases: [oae, oaexp]
     usage: /<command> reload
+    permission: oaexploits.reload
   worldstats:
     description: Command to display world stats
 permissions:

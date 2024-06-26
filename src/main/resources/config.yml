@@ -1,13 +1,11 @@
-config-version: 1.3.21
+config-version: 1.3.24
 
-# Messages configuration
-messages:
-  block-place:
-    text: '&cYou cannot place that block!'
-  command-blocked:
-    text: '&cYou cannot use this command!'
-  plugins-command-blocked:
-    text: '&cYou cannot view the plugins!'
+
+
+
+
+
+
 
 # Illegal items configuration
 illegal-items:
@@ -26,6 +24,17 @@ illegal-items:
     - END_PORTAL
     - SPAWNER
   items:
+
+# Chunk limiter configuration
+chunk-limiter:
+  limits:
+    CHEST: 400
+    TRAPPED_CHEST: 400
+    TNT: 200
+
+  messages:
+    block-limit-exceeded: You cannot place more than {limit} {block} blocks in this chunk.
+
 
 # Command whitelist configuration
 command-whitelist:
@@ -76,67 +85,8 @@ command-blacklist:
     - bukkit:?
     - bukkit:help
     - .plugins
-    - //wand
-    - //pos1
-    - //pos2
-    - //hsphere
-    - //sphere
-    - //hcyl
-    - //cyl
-    - //hollow
-    - //walls
-    - //replace
-    - //drain
-    - //copy
-    - //paste
-    - //rotate
-    - //flip
-    - //schematic
-    - //undo
-    - //redo
-    - //set
-    - //cut
-    - //expand
-    - //contract
-    - //shift
-    - //move
-    - //outline
-    - //deform
-    - //regen
-    - //fill
-    - //overlay
-    - //forest
-    - //stack
-    - //fixwater
-    - //fixlava
-    - //sel
-    - //deselect
-    - //size
-    - //count
-    - //searchitem
-    - //tool
-    - //brush
-    - //mask
-    - //mat
-    - //hpos1
-    - //hpos2
-    - //pyramid
-    - //hpyramid
 
-# Admin alerts configuration
-admin-alerts:
-  enabled: true
-  permission: oaexploits.alerts
-  cooldown: 60 # seconds between alerts to avoid spam
 
-# Logging settings configuration
-log-settings:
-  log-illegal-item-actions: true
-  log-file: logs/oaexploits.log
-  log-level: WARNING
-
-# Debug mode configuration
-debug-mode: false
 
 # Additional configurations
 additional-configs:
@@ -166,12 +116,19 @@ deop-on-leave:
     pitch: 0.0
   message: '&cYou have been deopped, your inventory cleared, and you have been teleported to the spawn point.'
 
-# Chunk limiter configuration
-chunk-limiter:
-  limits:
-    CHEST: 400
-    TRAPPED_CHEST: 400
-    TNT: 200
 
-  messages:
-    block-limit-exceeded: You cannot place more than {limit} {block} blocks in this chunk.
+# Admin alerts configuration
+admin-alerts:
+  enabled: true
+  permission: oaexploits.alerts
+  cooldown: 60 # seconds between alerts to avoid spam
+
+# Logging settings configuration
+log-settings:
+  log-illegal-item-actions: true
+  log-file: logs/oaexploits.log
+  log-level: WARNING
+
+
+  # Debug mode configuration to see what commands people are executing
+  debug-mode: false
