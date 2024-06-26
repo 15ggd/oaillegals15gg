@@ -1,8 +1,3 @@
-# Oaexploits Plugin
-
-![Stars](https://img.shields.io/github/stars/fanlimgames/oaexploits?style=social&color=green)
-![Downloads](https://img.shields.io/github/downloads/fanlimgames/oaexploits/total?color=green)
-![Forks](https://img.shields.io/github/forks/fanlimgames/oaexploits?style=social&color=green)
 
 ## support 
 https://discord.gg/xyhwEzzVXV
