@@ -88,13 +88,8 @@ additional-configs:
 
 removal-options:
   remove-illegal-items: true
-  remove-overleveled-enchantments: true
   clean-shulkers-on-place: true
   notify-player-on-illegal-placement: true
-
-  # Warning: Enabling this option can cause severe lag when chunks are loaded
-  remove-illegals-on-chunkload: false
-
 
 messages:
   illegal-item-placement:
@@ -110,6 +105,12 @@ messages:
     title: "&cIllegal Items Removed!"
     subtitle: "&cIllegal items were removed from your inventory."
   admin-alert: "&c%player% tried to interact with an illegal item: %item%"
+
+
+  # Warning: Enabling this option can cause severe lag when chunks are loaded
+  remove-illegals-on-chunkload: false
+
+
 
 
 # Deop on leave configuration
