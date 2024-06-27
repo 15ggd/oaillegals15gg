@@ -1,4 +1,4 @@
-config-version: 1.3.24
+config-version: 1.3.3
 
 # Illegal items configuration
 illegal-items:
@@ -89,8 +89,28 @@ additional-configs:
 removal-options:
   remove-illegal-items: true
   remove-overleveled-enchantments: true
+  clean-shulkers-on-place: true
+  notify-player-on-illegal-placement: true
+
   # Warning: Enabling this option can cause severe lag when chunks are loaded
   remove-illegals-on-chunkload: false
+
+
+messages:
+  illegal-item-placement:
+    title: "&cIllegal Block!"
+    subtitle: "&cYou cannot place that block!"
+  illegal-item-interaction:
+    title: "&cIllegal Item!"
+    subtitle: "&cYou tried to interact with an illegal item: %item%"
+  illegal-item-movement:
+    title: "&cIllegal Item!"
+    subtitle: "&cContainer tried to move an illegal item: %item%"
+  illegal-item-removal:
+    title: "&cIllegal Items Removed!"
+    subtitle: "&cIllegal items were removed from your inventory."
+  admin-alert: "&c%player% tried to interact with an illegal item: %item%"
+
 
 # Deop on leave configuration
 deop-on-leave:
