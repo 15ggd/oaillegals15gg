@@ -91,6 +91,7 @@ removal-options:
   clean-shulkers-on-place: true
   notify-player-on-illegal-placement: true
 
+
 messages:
   illegal-item-placement:
     title: "&cIllegal Block!"
