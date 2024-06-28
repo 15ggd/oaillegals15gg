@@ -5,61 +5,149 @@ https://discord.gg/xyhwEzzVXV
 
 
 
+### OaExploits Plugin
 
-Oaexploits is a Minecraft plugin designed to enhance server security by blocking unauthorized commands, removing illegal items, managing deop actions on player leave, and handling various configuration tasks. This plugin aims to provide server administrators with tools to maintain a fair and secure gameplay environment.
+Welcome to the OaExploits plugin! This powerful and versatile plugin is designed to help manage and maintain order on anarchy servers and other Minecraft servers that face issues with illegal items and excessive block placements. With OaExploits, you can set chunk limits, control commands, and monitor server stats—all with extensive configuration options.
 
-## Features
+#### Key Features:
 
-### 1. Command Blocking
-- **Whitelist and Blacklist:** Allows server administrators to define specific commands that are either allowed (whitelisted) or blocked (blacklisted).
-- **Preprocess Event Handling:** Blocks certain commands (e.g., `/give`, `/i`, `/item`) for non-operators, ensuring only authorized players can use them.
+1. **Illegal Items Management**:
+   - Automatically detects and removes illegal items from players' inventories and containers.
+   - Supports a comprehensive list of configurable illegal items such as command blocks, bedrock, barriers, and more.
+   
+   Example of configurable illegal items:
+   ```yaml
+   illegal-items:
+     blocks:
+     - CHAIN_COMMAND_BLOCK
+     - COMMAND_BLOCK
+     - COMMAND_BLOCK_MINECART
+     - REPEATING_COMMAND_BLOCK
+     - BEDROCK
+     - BARRIER
+     - STRUCTURE_BLOCK
+     - STRUCTURE_VOID
+     - NETHER_PORTAL
+     - LIGHT
+     - END_PORTAL_FRAME
+     - END_PORTAL
+     - SPAWNER
+   ```
 
-### 2. Deop on Leave
-- **Automatic Deop:** Automatically deops players who leave the server unless they are whitelisted.
-- **Inventory Clearing:** Clears the inventory of deopped players.
-- **Teleportation:** Teleports deopped players to a predefined location.
-- **Game Mode Reset:** Resets the game mode of deopped players to survival.
-- **Custom Messages:** Sends customizable messages to deopped players informing them of the actions taken.
+2. **Chunk Limiter**:
+   - Set limits for specific items within each chunk to prevent excessive block placement and potential server lag.
+   - Fully customizable messages to inform players when they exceed these limits.
+   
+   Example of chunk limiter configuration:
+   ```yaml
+   chunk-limiter:
+     limits:
+       CHEST: 400
+       TRAPPED_CHEST: 400
+       TNT: 200
+     
+     messages:
+       block-limit-exceeded: You cannot place more than {limit} {block} blocks in this chunk.
+   ```
 
-### 3. Illegal Items Removal
-- **Automatic Detection:** Detects and removes illegal items and over-leveled enchantments from players' inventories and various storage entities.
-- **Admin Alerts:** Alerts administrators when illegal items are detected and removed.
-- **Configurable Depth:** Scans nested inventories such as shulker boxes to a configurable depth.
+3. **Command Control**:
+   - Block specific commands and create a whitelist of allowed commands to control server operations.
+   - Improve server security by preventing unauthorized command usage.
 
-### 4. Chunk Management
-- **Chunk Scanning:** Scans chunks for illegal items and removes them.
-- **Entity Handling:** Checks entities like storage minecarts and chested animals for illegal items.
+   Examples of command whitelist and blacklist:
+   ```yaml
+   command-whitelist:
+     enabled: true
+     commands:
+     - help
+     - vote
+     - joindate
+     # ... other commands
+     
+   command-blacklist:
+     enabled: true
+     commands:
+     - op
+     - deop
+     - plugins
+     - pl
+     # ... other commands
+   ```
 
-## Getting Started
+4. **Customizable Notifications**:
+   - Notify players with customizable messages when they attempt to place or interact with illegal items.
+   - Tailor messages to fit your server's style and rules.
+   
+   Example of customizable messages:
+   ```yaml
+   messages:
+     illegal-item-placement:
+       title: '&cIllegal Block!'
+       subtitle: '&cYou cannot place that block!'
+     illegal-item-interaction:
+       title: '&cIllegal Item!'
+       subtitle: '&cYou tried to interact with an illegal item: %item%'
+     # ... other messages
+   ```
 
-### Installation
-1. Download the plugin jar file and place it in the `plugins` folder of your Minecraft server.
-2. Start the server to generate the default configuration files.
-3. Configure the plugin as needed by editing the `config.yml` and `worldstats.yml` files in the `plugins/Oaexploits` folder.
+5. **Built-in /stats Command**:
+   - Provides comprehensive world statistics for server admins and players.
+   - Useful for monitoring server health and player activities.
 
-### Configuration
-- `config.yml`: Main configuration file for the plugin.
-- `worldstats.yml`: Configuration file for managing world statistics.
+6. **Admin Alerts**:
+   - Sends alerts to admins when players attempt to interact with illegal items.
+   - Prevents abuse and keeps server administrators informed.
+   
+   Example of admin alerts configuration:
+   ```yaml
+   admin-alerts:
+     enabled: true
+     permission: oaexploits.alerts
+     cooldown: 60 # seconds between alerts to avoid spam
+   ```
 
-### Commands
-- `/oaexploits`: Reloads the plugin configuration.
-- `/worldstats`: Displays world statistics.
+7. **Deop on Leave**:
+   - Automatically deops players upon leaving the server.
+   - Optional teleportation to a specific location and customizable messages.
+   
+   Example of deop on leave configuration:
+   ```yaml
+   deop-on-leave:
+     enabled: true
+     whitelist:
+       enabled: false
+       players:
+       - playername1
+       - playername2
+     teleport:
+       world: world
+       x: 0.0
+       y: 64.0
+       z: 0.0
+       yaw: 0.0
+       pitch: 0.0
+     message: '&cYou have been deopped, your inventory cleared, and you have been teleported to the spawn point.'
+   ```
 
-## Usage
+8. **Logging and Debugging**:
+   - Log illegal item actions with configurable log levels and files.
+   - Enable debug mode to see what commands players are executing.
 
-### Deop on Leave Configuration
-To enable or disable the deop on leave feature and customize its behavior, modify the `config.yml` file:
-```yaml
-deop-on-leave:
-  enabled: true
-  whitelist:
-    players:
-      - "admin"
-  teleport:
-    world: "world"
-    x: 0.0
-    y: 64.0
-    z: 0.0
-    yaw: 0.0
-    pitch: 0.0
-  message: "&cYou have been deopped, your inventory cleared, and you have been teleported to the spawn point."
+   Example of logging and debug settings:
+   ```yaml
+   log-settings:
+     log-illegal-item-actions: true
+     log-file: logs/oaexploits.log
+     log-level: WARNING
+     
+   debug-mode: true
+   ```
+
+#### Installation and Usage:
+
+1. **Download and Install**: Download the plugin from https://github.com/fanlimgames/oaexploits/releases  and place it in your server's plugins folder.
+2. **Configure**: Edit the `config.yml` file to suit your server's requirements.
+3. **Start Your Server**: Restart your server to load the plugin.
+4. **Enjoy**: Your server is now protected with OaExploits!
+
+Whether you run a large anarchy server or a small private server, OaExploits helps you maintain order and prevent exploitation. Download now and enhance your server's security and fairness!
