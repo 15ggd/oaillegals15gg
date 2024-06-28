@@ -49,6 +49,7 @@ command-whitelist:
     - toggledeathmsg
     - dmt
     - worldstats
+    - playtime
     - stats
     - tps
     - msg

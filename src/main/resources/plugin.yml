@@ -10,6 +10,8 @@ commands:
     permission: oaexploits.reload
   worldstats:
     description: Command to display world stats
+  playtime:
+    description: get playtime
 permissions:
   oaexploits.reload:
     description: Allows the player to reload the Oaexploits configuration
