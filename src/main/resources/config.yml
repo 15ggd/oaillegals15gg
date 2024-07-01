@@ -96,7 +96,7 @@ removal-options:
 messages:
   illegal-item-placement:
     title: "&cIllegal Block!"
-    subtitle: "&cYou cannot place that block!"
+    subtitle: "&cThis is an illegal item!"
   illegal-item-interaction:
     title: "&cIllegal Item!"
     subtitle: "&cYou tried to interact with an illegal item: %item%"
