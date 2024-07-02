@@ -1,4 +1,4 @@
-config-version: 1.3.53
+config-version: 1.3.54
 
 # Illegal items configuration
 illegal-items:
@@ -15,8 +15,12 @@ illegal-items:
     - LIGHT
     - END_PORTAL_FRAME
     - END_PORTAL
+    - JIGSAW
     - SPAWNER
   items:
+    ## - DRAGON_EGG idk whether or not to add this, fanigg you decide
+    - KNOWLEDGE_BOOK
+    - DEBUG_STICK
 
 # Chunk limiter configuration
 chunk-limiter:
@@ -62,7 +66,6 @@ command-whitelist:
     - r
     - reply
     - last
-    - kill
     - shop
     - skin
 
@@ -79,13 +82,15 @@ command-blacklist:
     - bukkit:?
     - bukkit:help
     - .plugins
+    
+
 
 
 
 # Additional configurations
 additional-configs:
-  check-interval: 10 # Time in seconds between periodic checks
-  inventory-scan-depth: 3 # Depth of inventory scanning, affects how many nested inventories are checked
+  check-interval: 10 # Time in seconds between periodic checks 
+  inventory-scan-depth: 3 # Depth of inventory scanning, affects how many nested inventories are checked 
 
 removal-options:
   remove-illegal-items: true
